@@ -20,7 +20,7 @@
 
 ## 配置bash ##
 >1. 编辑`.bash_profile`文件，增加如下内容   
->alias ls="ls -G" 
+>alias ls="ls -G"  
 >alias ll="ls -alGF"  
 >alias grep="grep --color=auto"  
 >alias ctagscxx="ctags -R --languages=c++ --langmap=c++:+..inl.c -h +..inl --c++-kinds=+px --fields=+aiSz --extra=+q"  
@@ -33,8 +33,8 @@
 >   `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 >2. 创建vim的临时目录  
 > `mkdir ~/.vimtmp`  
-> `mkdir ~/.tags`  ##可以把ctags生成的标签文件放到此处，.vimrc里自动加载此处   
->  `mkdir ~/.cscope`   ##可以把cscope生成的标签文件放到此处，.vimrc里自动加载此处
+> `mkdir ~/.tags`  ##可以把ctags生成的标签放到此处，.vimrc里自动加载此处标签  
+>  `mkdir ~/.cscope`   ##可以把cscope生成的标签放到此处，.vimrc里自动加载此处标签文  
 >3. 从resource下载`vimrc`文件到`~/.vimrc`  
 > `wget https://raw.githubusercontent.com/kdbg/osx-terminal/master/resource/vimrc -O ~/.vimrc`  
 >4. 进入`vim`，执行命令下载其它插件  
