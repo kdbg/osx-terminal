@@ -100,8 +100,8 @@ Plugin 'vimchina/vimcdoc'
 Plugin 'shiracamus/vim-syntax-x86-objdump-d'
 
 " vim-linux-coding-style
-Plugin 'vivien/vim-linux-coding-style'
-"let g:linuxsty_patterns=[expand("~/OSCode/Linux/")]
+" Plugin 'vivien/vim-linux-coding-style'
+" let g:linuxsty_patterns=[expand("~/OSCode/Linux/")]
 
 " vim-dirdiff
 Plugin 'will133/vim-dirdiff'
