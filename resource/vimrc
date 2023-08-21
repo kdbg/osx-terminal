@@ -25,6 +25,8 @@ set foldmethod=syntax
 set foldlevel=99
 set fileencodings=utf-8,gbk
 let mapleader=';'
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>p :bp<CR>
 
 " vbundle
 set nocompatible
@@ -71,6 +73,9 @@ let g:airline_symbols.maxlinenr=''
 " Visual-Mark
 Plugin 'vim-scripts/Visual-Mark'
 
+" vim-dirdiff
+Plugin 'will133/vim-dirdiff'
+
 " hexmode
 Plugin 'fidian/hexmode'
 
@@ -89,9 +94,9 @@ let c_no_curly_error=1
 
 " derekwyatt/vim-fswitch
 Plugin 'derekwyatt/vim-fswitch'
-nmap <silent> <Leader>oa :FSHere<cr>
-nmap <silent> <Leader>or :FSSplitRight<cr>
-nmap <silent> <Leader>ol :FSSplitLeft<cr>
+nnoremap <silent> <Leader>oa :FSHere<cr>
+nnoremap <silent> <Leader>or :FSSplitRight<cr>
+nnoremap <silent> <Leader>ol :FSSplitLeft<cr>
 
 " vimcdoc
 Plugin 'vimchina/vimcdoc'
@@ -100,11 +105,8 @@ Plugin 'vimchina/vimcdoc'
 Plugin 'shiracamus/vim-syntax-x86-objdump-d'
 
 " vim-linux-coding-style
-" Plugin 'vivien/vim-linux-coding-style'
-" let g:linuxsty_patterns=[expand("~/OSCode/Linux/")]
-
-" vim-dirdiff
-Plugin 'will133/vim-dirdiff'
+Plugin 'vivien/vim-linux-coding-style'
+let g:linuxsty_patterns=[expand("~/OSCode/Linux/")]
 
 call vundle#end()
 filetype plugin indent on
@@ -128,5 +130,13 @@ if filereadable(".cscope.out")
     cs add .cscope.out
 endif
 set nocsverb
+set cscopequickfix=a-,c-,d-,e-,f-,g-,i-,s-,t-
+nnoremap <C-n> :cnext<CR>
+nnoremap <C-p> :cprev<CR> 
+nnoremap <leader>cc :cs find c <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>ce :cs find e <C-R>=expand("<cword>")<CR><CR>
+
 
 iab /// //////////////////////////////////////////////////////////////////////////////<CR><BS><BS>
